@@ -1,0 +1,39 @@
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+{% extends "base.html" %}
+{% block content %}
+
+    {% include "adv.html" %}
+
+    <a href="tg://{{ link }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">{{ message_open }}</a>
+
+    <div id="timer" class="alert alert-info mt-2" role="alert">
+        {{ message_redirecting }}.
+    </div>
+
+
+    <script>
+
+    var count = {{ cooldown_redirect }};
+    var redirectlink = "tg://" + "{{ link }}";
+
+    function redirect() {
+        window.location.href = redirectlink;
+    }
+
+    function countDown() {
+        var timer = document.getElementById("timer");
+
+        if (count > 0) {
+            count--;
+            timer.innerHTML = "{{ message_redirect }} " + count + " {{ message_sec }}";
+            setTimeout(countDown, 1000);
+        } else {
+            redirect();
+            timer.innerHTML = "{{ message_redirecting }}";
+        }
+    }
+
+    countDown()
+    </script>
+
+{% endblock content %}

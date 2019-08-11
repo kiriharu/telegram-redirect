@@ -1,0 +1,25 @@
+#outer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#inner {
+    margin: auto;
+}
+
+body, html {
+    height: 100%;
+}
+
+.descript {
+    color: #666666;
+    max-width: 400px;
+    margin: auto;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}

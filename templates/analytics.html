@@ -1,0 +1,16 @@
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+{% if g_active is sameas true %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ g_tag }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', '{{ g_tag }}');
+</script>
+
+{%  endif %}

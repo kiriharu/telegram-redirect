@@ -1,0 +1,15 @@
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+{% extends "base.html" %}
+{% block content %}
+
+    {% include "adv.html" %}
+
+    <script>
+        function convert(){
+            document.getElementById("inputUrl").value=document.getElementById("inputUrl").value.replace("t.me","{{ hostname }}").replace("http://","https://").replace("@","https://{{ hostname }}/")}
+    </script>
+
+    <input type="inputUrl" id="inputUrl" class="form-control" placeholder="t.me/.." required="" autofocus="">
+    <button style="border-radius: 0 0 4px 4px" class="btn btn-lg btn-primary btn-block" onclick="convert()" type="button">{{ message_convert }}</button>
+
+{% endblock content %}

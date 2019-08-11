@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+{% block content %}
+    <div class="alert alert-primary text-center" role="alert">
+        <h4 class="alert-heading text-center">{{ message_banned_title }}</h4>
+        <p>{{ message_banned_info }}</p>
+    </div>
+
+    {% include "adv.html" %}
+{% endblock content %}

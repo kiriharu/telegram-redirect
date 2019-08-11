@@ -1,0 +1,4 @@
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+{% if adverstiment_active is sameas true %}
+    <p><a href="{{ adv_link }}"><img src="{{url_for('static', filename=adv_pic)}}" width="{{ adv_h }}" height="{{ adv_w }}" alt="{{ adv_alt }}"></a></p>
+{%  endif %}

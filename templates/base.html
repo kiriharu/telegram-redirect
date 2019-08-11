@@ -1,0 +1,22 @@
+<!-- Copyright (C) 2019 kiriharu, MIT License https://github.com/kiriharu/telegram-redirect -->
+<!DOCTYPE html>
+<head>
+    {% include "analytics.html" %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+    <script src="{{ url_for('static', filename='js.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body class="d-flex flex-column">
+    <div id="outer" class="container">
+        <div id="inner">
+            <div class="d-flex align-items-center flex-column justify-content-center">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+</html>
