@@ -32,3 +32,6 @@ python3 app.py
 ```
 
 ### Скриншоты
+
+![Main page](https://github.com/kiriharu/telegram-redirect/blob/master/tg1.png)
+![Redirect page](https://github.com/kiriharu/telegram-redirect/blob/master/tg2.png)
